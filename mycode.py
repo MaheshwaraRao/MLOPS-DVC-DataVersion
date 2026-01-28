@@ -6,6 +6,8 @@ data = {'Name' : ['Alice', 'Bob', 'Charlie'],
         'City' : ['New York', 'Los Angeles', 'Chicago']}
 df = pd.DataFrame(data)
 
+new_row_loc = {'Name': 'David', 'Age': 40, 'City': 'Boston'}
+df.loc[len(df)] = new_row_loc
 # Ensure the output directory exists
 data_dir = 'data'
 os.makedirs(data_dir, exist_ok=True)
